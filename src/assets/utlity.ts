@@ -38,6 +38,7 @@ export const sideLinks: LinkProps[] = [
 ];
 
 export interface PlanProps {
+  id:number;
   plan: string;
   discount: number;
   price: number;
@@ -47,7 +48,7 @@ export interface PlanProps {
 }
 
 export const planItems = [
-  {
+  {id:1,
     plan: "Basic",
     discount: 89.9,
     price: 9.99,
@@ -55,7 +56,7 @@ export const planItems = [
     storage: 25,
     support: ["Email"],
   },
-  {
+  {id:2,
     plan: "Basic",
     discount: 89.9,
     price: 9.99,
@@ -63,7 +64,7 @@ export const planItems = [
     storage: 25,
     support: ["Email", "Chat"],
   },
-  {
+  {id:3,
     plan: "Basic",
     discount: 89.9,
     price: 9.99,

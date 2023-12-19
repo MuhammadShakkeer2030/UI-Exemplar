@@ -8,19 +8,19 @@ interface SideProps {
     setShowSidebar: Dispatch<SetStateAction<boolean>>
 }
 
-export const Sidebar: FC<SideProps> = ({ setShowSidebar, showSidebar }) => {
+export const Sidebar: FC<SideProps> = ({ setShowSidebar, }) => {
 
 
     return (
-        <div className={` shadow-2xl flex justify-center relative ${showSidebar && "w-[200px]"}`}>
+        <aside className={` shadow-2xl flex justify-center absolute md:relative w-[200px] h-[60vh]  z-50 `}>
 
 
-            <button onClick={() => setShowSidebar(false)} className={`${!showSidebar && "hidden"} absolute top-2  right-2 z-50`}>X</button>
+            <button onClick={() => setShowSidebar(false)} className={`absolute top-2  right-2`}>X</button>
 
 
-            {showSidebar && <div className="absolute z-40   ">
+             <div className="absolute   ">
                 {/* logo show on mubile only */}
-                <img src="/imgs/logo.png" alt="logo" className="w-[200px] md:hidden" />
+                {/* <img src="/imgs/logo.png" alt="logo" className="w-[200px] md:hidden" /> */}
 
                 <Profile />
                 <div>
@@ -31,7 +31,7 @@ export const Sidebar: FC<SideProps> = ({ setShowSidebar, showSidebar }) => {
                 </div>
 
                 <button className="flex items-center p-2 hover:bg-primary">Logout <PiPower /> </button>
-            </div>}
-        </div>
+            </div>
+        </aside>
     );
 };

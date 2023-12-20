@@ -3,13 +3,13 @@ import { PlanCard } from "./PlanCard";
 
 export function Hero() {
     return (
-        <div className=" bg-white">
-            <div className="w-[350px] py-5 m-auto ">
+        <div className="w-full md:w-[80%]  bg-white">
+            <div className="w-[350px] md:w-auto py-5 m-auto ">
                 <h3 className="text-[30px] font-bold text-center mb-4 md:mb-0">Choose a plan that's right for you!</h3>
             </div>
 
             <div className="flex justify-end ">
-                {/* tslide button */}
+                {/* slide button */}
                 <div className="border-4 rounded-full">
                     <button className=" bg-primary px-4 py-2 rounded-full font-semibold text-[10px] md:text-[15px]">Monthly</button><button className="  px-4 py-2 rounded-full relative font-semibold text-[10px] md:text-[15px]">Annually <span className="text-green-500 tex-[3px] md:text-[5px] absolute top-0 right-2">-10%</span> </button>
                 </div>

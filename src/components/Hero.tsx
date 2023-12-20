@@ -3,7 +3,7 @@ import { PlanCard } from "./PlanCard";
 
 export function Hero() {
     return (
-        <div className="w-full md:w-[80%]  bg-white">
+        <div className="w-full md:w-[80%] h-auto bg-white">
             <div className="w-[350px] md:w-auto py-5 m-auto ">
                 <h3 className="text-[30px] font-bold text-center mb-4 md:mb-0">Choose a plan that's right for you!</h3>
             </div>
@@ -15,13 +15,13 @@ export function Hero() {
                 </div>
             </div>
             <div className="flex flex-col md:flex-row justify-evenly items-center gap-3 mt-5">
-                {planItems?.map((plan, index) => <PlanCard key={index} plan={plan} quickPlan={undefined} index={index} style={{ w: "350px" }}  />)}
+                {planItems?.map((plan, index) => <PlanCard key={index} plan={plan} quickPlan={undefined} index={index}  customwidth={'w-[400px] md:w-[350px]'} />)}
 
 
             </div>
-            <div className="flex flex-col md:flex-row  items-center gap-3">
+            <div className="flex flex-col md:flex-row  items-center gap-3 mt-4">
 
-                {quickPlans?.map((plan, index) => <PlanCard key={index} quickPlan={plan} plan={undefined} style={{ w:undefined }} index={index} />)}
+                {quickPlans?.map((plan, index) => <PlanCard key={index} quickPlan={plan} plan={undefined} index={index} customwidth={"w-full md:w-1/2"}/>)}
             </div>
         </div>
     )

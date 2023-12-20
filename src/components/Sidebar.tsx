@@ -24,13 +24,13 @@ export const Sidebar: FC<SideProps> = ({ setShowSidebar, showSidebar }) => {
 
                 <Profile />
                 <div className="w-[200px] flex flex-col flex-start" >
-                    {sideLinks?.map((link) => <li key={link.id} className="list-none flex gap-2 items-center justify-between py-3 transition-colors hover:bg-primary cursor-pointer w-fit px-2 font-medium">
+                    {sideLinks?.map((link) => <li key={link.id} className="list-none flex gap-2 items-center justify-between py-3 transition-colors hover:bg-primary cursor-pointer  max-w-[180px] px-2 font-medium border-2 border-sky-500/30 my-2">
                         <span>{`Icon`}</span>
                         <p>{link.link}</p>
                     </li>)}
                 </div>
 
-                <button className="flex items-center p-2 hover:bg-primary">Logout <PiPower /> </button>
+                <button className="flex items-center p-2 hover:bg-primary font-bold text-[#8ab9ff] md:mt-20">Logout <PiPower /> </button>
             </div>
         </aside>
     );

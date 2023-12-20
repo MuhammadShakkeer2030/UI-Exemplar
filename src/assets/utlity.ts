@@ -38,50 +38,52 @@ export const sideLinks: LinkProps[] = [
 ];
 
 export interface PlanProps {
-  id:number;
+  id: number;
   plan: string;
   discount: number;
   price: number;
   user: number;
   storage: number;
-  support: string[];
+  support: string;
 }
 
 export const planItems = [
-  {id:1,
+  {
+    id: 1,
     plan: "Basic",
     discount: 89.9,
     price: 9.99,
     user: 25,
     storage: 25,
-    support: ["Email"],
+    support: "Email",
   },
-  {id:2,
-    plan: "Basic",
+  {
+    id: 2,
+    plan: "Standard",
     discount: 89.9,
     price: 9.99,
     user: 25,
     storage: 25,
-    support: ["Email", "Chat"],
+    support: "Email+Chat",
   },
-  {id:3,
-    plan: "Basic",
+  {
+    id: 3,
+    plan: "Premium",
     discount: 89.9,
     price: 9.99,
     user: 25,
     storage: 25,
-    support: ["Email", "Chat", "Whatsapp"],
+    support: "Email+Chat+Whatsapp",
   },
 ];
 
 export interface QuickPlanProps {
-    plan: string;
-    descr: string;
-    user: number;
-    storage?: number;
-    support: string[];
-  }
-  
+  plan: string;
+  descr: string;
+  user: number;
+  storage?: number;
+  support: string;
+}
 
 export const quickPlans = [
   {
@@ -91,13 +93,13 @@ export const quickPlans = [
 
     user: 8,
     storage: 3,
-    support: ["Email", "Chat", "Whatsapp"],
+    support: "Email+Chat+Whatsapp",
   },
   {
     plan: "Free Starter",
     descr:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veniam nesciunt ullam minima, cum delectus velit amet pariatur harum ipsa ex sapiente est vero error necessitatibus tempora illum ea impedit!",
     user: 75,
-    support: ["Customization of all features"],
+    support: "Customization of all features",
   },
 ];

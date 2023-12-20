@@ -1,5 +1,6 @@
-import { BsBell,  BsMenuButtonFill } from "react-icons/bs"
+import { BsBell,  } from "react-icons/bs"
 import { IoChevronDownSharp, } from "react-icons/io5"
+import { IoIosMenu } from "react-icons/io"
 
 interface HeaderProps {
     toggleMenu: () => void
@@ -7,7 +8,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
     return (
-        <header className="flex justify-between items-center px-5  w-full">
+        <header className="flex justify-between items-center px-5  w-[80%]">
 
             <img src="/imgs/logo.png" alt="logo" className=" w-[100px] md:w-[150px] " />
 
@@ -22,12 +23,15 @@ export const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
                 </div>
             </div>
 
-
-            <button className="group">
+{/*     position: absolute;
+    top: 200px;
+    right: 100px;
+    z-index: 99; */}
+            <button className="static lg:absolute top-[200px] right-[100px] z-50 group p-4 bg-primary">
                 <BsBell className="text-[20px] " />
                 <div className="w-4 h-4 rounded-full bg-red-500 text-[10px] group-hover:animate-pulse">3</div>
             </button>
-            <button className="md:hidden" onClick={toggleMenu}><BsMenuButtonFill /></button>
+            <button className="md:hidden" onClick={toggleMenu}><IoIosMenu /></button>
         </header>
     )
 }

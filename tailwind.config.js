@@ -10,7 +10,7 @@ export default {
         primary:"#e3f1fe"
       },
       colors:{
-        primary:"e3f1fe"
+        primary:"#e3f1fe"
       }
     },
   },

@@ -15,7 +15,7 @@ const Dashboard = () => {
 
 
             </div>
-            <div className="mt-2 md:mt-5 relative flex ">
+            <div className="mt-2 md:mt-5 relative flex h-auto">
                 <Sidebar showSidebar={showSidebar}
                     setShowSidebar={setShowSidebar} />
                 <Hero />

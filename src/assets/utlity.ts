@@ -1,12 +1,13 @@
 import { MdDashboard } from "react-icons/md";
 import { PiPottedPlantFill } from "react-icons/pi";
-import { FaRegComments } from "react-icons/fa";
+import { FaCommentsDollar, FaPuzzlePiece,  } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
+import { IconType } from "react-icons";
 
 interface LinkProps {
   id: number;
   link: string;
-  icon: JSX.Element;
+  icon: IconType;
 }
 
 export const sideLinks: LinkProps[] = [
@@ -23,12 +24,12 @@ export const sideLinks: LinkProps[] = [
   {
     id: 3,
     link: "Addons",
-    icon: null,
+    icon: FaPuzzlePiece,
   },
   {
     id: 4,
     link: "FAQ",
-    icon: FaRegComments,
+    icon: FaCommentsDollar ,
   },
   {
     id: 5,
@@ -78,6 +79,8 @@ export const planItems = [
 ];
 
 export interface QuickPlanProps {
+  id:number
+  label:string,
   plan: string;
   descr: string;
   user: number;
@@ -86,19 +89,22 @@ export interface QuickPlanProps {
 }
 
 export const quickPlans = [
-  {
+  
+  {id:1,label:"Free Forever",
     plan: "Free Starter",
     descr:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veniam nesciunt ullam minima, cum delectus velit amet pariatur harum ipsa ex sapiente est vero error necessitatibus tempora illum ea impedit!",
+      "The Quickest and easiest way to try protocols with basic functionalities",
 
     user: 8,
     storage: 3,
     support: "Email+Chat+Whatsapp",
   },
-  {
+  
+  {id:2,
+    label:"Let's Connect",
     plan: "Free Starter",
     descr:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veniam nesciunt ullam minima, cum delectus velit amet pariatur harum ipsa ex sapiente est vero error necessitatibus tempora illum ea impedit!",
+      "Effertless customize and fine-tune services as your needs shift, ensuring the perfect tools for success",
     user: 75,
     support: "Customization of all features",
   },

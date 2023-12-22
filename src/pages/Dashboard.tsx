@@ -13,8 +13,7 @@ const Dashboard = () => {
 
 
 
-            <div className="mt-2 md:mt-5 relative flex h-auto bg-white xl:w-[9
-                0%]">
+            <div className="mt-2 md:mt-5 relative flex h-auto bg-white xl:w-[90%]">
                 <Sidebar showSidebar={showSidebar}
                     setShowSidebar={setShowSidebar} />
                 <Hero />

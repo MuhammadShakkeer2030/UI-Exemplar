@@ -14,8 +14,7 @@ export const Sidebar: FC<SideProps> = ({ setShowSidebar, showSidebar }) => {
 
     return (
 
-        <aside className={`drop-shadow-2xl
-         flex justify-center md:justify-start px-5 md:px-0 fixed h-[100vh] bg-white top-0 xl:relative w-[250px] md:min-h-fit z-50 ${showSidebar ? "w-full h-full" : "hidden xl:block"} overscroll-hidden md:overscroll-none`}>
+        <aside className={`drop-shadow-2xl flex justify-center md:justify-start px-5 md:px-0 fixed h-[100vh] bg-white top-0 xl:relative w-[250px] md:min-h-fit z-50 ${showSidebar ? "w-full h-full" : "hidden xl:block"} overscroll-hidden md:overscroll-none`}>
             <button onClick={() => setShowSidebar(false)} className="absolute top-2 right-5 z-50 xl:hidden">X</button>
             <div style={{ height: "inherit" }} className="absolute  md:w-full flex flex-col items-center bg-white">
                 {/* Logo show on mobile only */}

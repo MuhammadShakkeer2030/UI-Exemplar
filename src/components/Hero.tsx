@@ -53,7 +53,7 @@ export function Hero() {
 
       <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-3 mt-4">
         {quickPlans?.map((plan, index) => (
-          <PlanCard key={index} quickPlan={plan} plan={undefined} index={index} customstyle="w-full flex md:w-4/5 lg:w-[45%] xl:w-[50%] mx-2 md:mx-0" />
+          <PlanCard key={index} quickPlan={plan} plan={undefined} index={index} customstyle="w-full flex flex-col md:flex-row md:w-4/5 lg:w-[45%] xl:w-[50%] mx-2 md:mx-0" />
         ))}
       </div>
     </div>
